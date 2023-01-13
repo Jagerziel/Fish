@@ -5,9 +5,34 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: rgb(0, 0, 80);
+    background-image: url('../../../public/Images/Img2.jpg');
+    background-position: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
 }
 
 .NavRight {
     border: 2px solid red;
     font-size: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.Links {
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    font-size: 1rem;
+    color: white;
+    background-color: rgb(6, 21, 72);
+}
+
+.Links:hover {
+    background-color: rgb(169, 215, 255);
+    color: black;
 }

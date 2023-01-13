@@ -6,6 +6,11 @@ import { useState } from 'react';
 function FishContent() {
     //Assign Variables
 
+
+
+
+    
+
     return (   
         <>
             <div className='FishContentContainer'>

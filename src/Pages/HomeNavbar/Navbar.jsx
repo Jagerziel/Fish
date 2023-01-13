@@ -2,17 +2,21 @@
 import './Navbar.css'
 import DataDL from './DataDL.jsx'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 //Build Navbar Component
-function Navbar() {
+function Navbar(props) {
     //Assign Variables
+    const { data , setData } = props
+
 
     return (   
         <>
             <div className='NavbarContainer'>
-                <DataDL />
+                <DataDL data={data} setData={setData}/>
                 <div className='NavRight'>
-                    Explore More
+                    <Link to={`/`} className="Links">Home</Link>
+                    <Link to={`/fish`} className="Links">More Fish!</Link>
                 </div>
             </div>
         </>
