@@ -11,6 +11,9 @@ function Navbar() {
         <>
             <div className='NavbarContainer'>
                 <DataDL />
+                <div className='NavRight'>
+                    Explore More
+                </div>
             </div>
         </>
     );

@@ -1,9 +1,13 @@
 .NavbarContainer {
-    width: 100%;
     border: 2px solid red;
     height: 3.2rem;
     padding: 1rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
+.NavRight {
+    border: 2px solid red;
+    font-size: 2rem;
+}

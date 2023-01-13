@@ -2,7 +2,9 @@
 import './App.css';
 //Import Components
 import Navbar from './Pages/HomeNavbar/Navbar.jsx';
-import { BrowserRouter , Routes , Route } from "react-router-dom";
+import Content from './Pages/HomeContent/Content.jsx'
+//Import Routes
+import { Routes , Route } from "react-router-dom";
 
 function App() {
   return (
@@ -10,7 +12,7 @@ function App() {
       <Navbar />
       <div className='MainContent'>
         <Routes>
-          {/* <Route path="/" element={<h2>Home!</h2>}/> */}
+          <Route path="/" element={<Content />}/>
         </Routes> 
       </div>
     </div>
