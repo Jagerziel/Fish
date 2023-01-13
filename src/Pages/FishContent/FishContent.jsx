@@ -12,6 +12,7 @@ function FishContent() {
             <div className='FishContentContainer'>
                 <div className='Fishies'>
                     Fish Content Link
+                    <FishBox />
                 </div>
             </div>
         </>
