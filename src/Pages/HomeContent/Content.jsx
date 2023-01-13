@@ -14,13 +14,31 @@ function Content(props) {
     useEffect(() => {
         fetch(`https://projecttwoapi-production.up.railway.app/api/fish`)
         .then(res => res.json())
-        .then(data => setData(parse(data)))
+        .then(data => setData(data))
       }, []); 
-    console.log(data)
-    // if (!data[randomNum]) return <h1>Loading…</h1>;
+    // console.log(data)
+
+
     
-    // let speciesName = data[randomNum]["Species Name"]
-    // let habitat = data[randomNum]['Habitat']
+    if (!data[randomNum]) return <h1>Loading…</h1>;
+    
+    let speciesName = data[randomNum]["Species Name"]
+    let habitat = data[randomNum]['Habitat']
+    if (habitat !== null) {
+        habitat = habitat.replaceAll("<ul>", "")
+        habitat = habitat.replaceAll("</ul>", "")
+        habitat = habitat.replaceAll("<li>", "")
+        habitat = habitat.replaceAll("</li>", "")
+        habitat = habitat.replaceAll("&nbsp", "")
+        habitat = habitat.replaceAll("<em>", "")
+        habitat = habitat.replaceAll("</em>", "")
+        habitat = habitat.replaceAll(";", "")
+    } else {
+        habitat = "Data Unavailable"
+    }
+    // habitat = habitat.replaceAll("</li>", "") !== null ? habitat.replaceAll("</li>", "") : habitat
+    // habitat = habitat.replaceAll("</li>", "") !== null ? habitat.replaceAll("</li>", "") : habitat
+    
 
 
     //Assign Variables
@@ -28,9 +46,9 @@ function Content(props) {
         <>
 
             <div className='ContentContainer'>
-                Content for Home Page
-                {/* {speciesName && <h3>{speciesName}</h3>}
-                {habitat && <p>{habitat}</p>} */}
+                {/* Content for Home Page */}
+                {speciesName && <h3 className='HomeHeader'>{speciesName}</h3>}
+                {habitat && <p className='HomeContent'>{habitat}</p>}
             </div>
         </>
     );
