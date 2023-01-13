@@ -1,2 +1,2 @@
-import Content from './Content.css'
+import './Content.css'
 

@@ -1,1 +1,1 @@
-import Fishbox from './FishBox.css'
+import './FishBox.css'
