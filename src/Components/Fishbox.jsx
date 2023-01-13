@@ -1,10 +1,9 @@
-import './FishBox.css'
-
-import './DataDL.css'
-
+import './Fishbox.css'
+import { useEffect , useState } from 'react'
 
 //Build Navbar Component
 function FishBox() {
+    const [ data , setData ] = useState([])
     // //Assign Variables
     function twelveRandomFish () {
         let fishArr = []
@@ -13,7 +12,7 @@ function FishBox() {
         }
         return fishArr
     } 
-    console.log(fishArr())
+// console.log(fishArr())
 
 
     useEffect(() => {
@@ -28,7 +27,13 @@ function FishBox() {
         <>
             <div className='FishBox'>
                 <ul className='FishList'>
-                    {data.map()}
+                    {data.map((item, index) => {
+                        return (
+                            <li key={index} className='FishListItem'>
+                                <p>{item["Species Name"]}</p>
+                            </li>
+                        )
+                    })}
                 </ul>
             </div>
         </>

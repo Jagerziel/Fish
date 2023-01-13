@@ -33,6 +33,9 @@ function Content(props) {
         habitat = habitat.replaceAll("<em>", "")
         habitat = habitat.replaceAll("</em>", "")
         habitat = habitat.replaceAll(";", "")
+        habitat = habitat.replaceAll("<a href=", "")
+        habitat = habitat.replaceAll("</a", "")
+        habitat = habitat.replaceAll(">", "")
     } else {
         habitat = "Data Unavailable"
     }
