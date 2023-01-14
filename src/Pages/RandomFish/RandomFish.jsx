@@ -36,7 +36,7 @@ function RandomFish() {
         habitat = habitat.replaceAll("</a", "")
         habitat = habitat.replaceAll(">", "")
     } else {
-        habitat = "Data Unavailable"
+        habitat = "Information Unavailable from API"
     }
 
 
