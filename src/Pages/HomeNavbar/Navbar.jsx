@@ -12,7 +12,7 @@ function Navbar() {
                 <DataDL />
                 <div className='NavRight'>
                     <Link to={`/`} className="Links">Home</Link>
-                    <Link to={`/random-fish`} className="Links">Random Fish!</Link>
+                    <Link to={`/random-fish`} className="Links">Random Fish</Link>
                     <Link to={`/fish`} className="Links">More Fish!</Link>
                 </div>
             </div>
