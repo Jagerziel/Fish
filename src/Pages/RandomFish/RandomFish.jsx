@@ -3,7 +3,7 @@ import './RandomFish.css'
 import { useState , useEffect } from 'react';
 
 //Build Navbar Component
-function RandomFish() {
+function RandomFish({ toggleRand }) {
     //Assign Variables
     const [ data , setData ] = useState([])
 
@@ -14,7 +14,7 @@ function RandomFish() {
         fetch(`https://projecttwoapi-production.up.railway.app/api/fish`)
         .then(res => res.json())
         .then(data => setData(data))
-      }, []); 
+      }, [toggleRand]); 
     // console.log(data)
 
 

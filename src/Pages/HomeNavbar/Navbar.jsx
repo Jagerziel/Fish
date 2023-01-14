@@ -1,17 +1,12 @@
 //Imports
 import './Navbar.css'
 import DataDL from './DataDL.jsx'
-import { useState } from 'react';
+import { useState , Component } from 'react';
 import { Link } from 'react-router-dom';
 import RandomFish from '../RandomFish/RandomFish.jsx';
 
 //Build Navbar Component
 function Navbar() {
-    // const [value, setValue] = useState()
-    // function refresh () {
-    //     this.setValue({})
-    // }
-
     return (   
         <>
             <div className='NavbarContainer'>
