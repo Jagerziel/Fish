@@ -6,6 +6,7 @@ import { useState , useEffect } from 'react';
 function RandomFish() {
     //Assign Variables
     const [ data , setData ] = useState([])
+    const [ toggle , setToggle ] = useState(false)
 
     let randomNum = Math.floor(Math.random() * data.length)
 

@@ -12,15 +12,13 @@ import { createStore } from 'react-redux'
 import parse from 'html-react-parser';
 
 function App() {
-  const [data , setData ] = useState([])
-
 
   return (
     <div className="App">
       <Navbar />
       <div className='MainContent'>
         <Routes>
-          <Route path="/" element={<Content data={ data } setData={ setData }/>}/>
+          <Route path="/" element={<Content />}/>
           <Route path="/fish" element={<FishContent />}/>
           <Route path="/random-fish" element={<RandomFish />}/>
         </Routes> 
