@@ -7,6 +7,11 @@ import RandomFish from '../RandomFish/RandomFish.jsx';
 
 //Build Navbar Component
 function Navbar() {
+    // const [value, setValue] = useState()
+    // function refresh () {
+    //     this.setValue({})
+    // }
+
     return (   
         <>
             <div className='NavbarContainer'>
