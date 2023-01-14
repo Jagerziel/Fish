@@ -1,7 +1,7 @@
 import './DataDL.css'
 
 //Build Navbar Component
-function DataDL(props) {
+function DataDL() {
 
     return (   
         <>

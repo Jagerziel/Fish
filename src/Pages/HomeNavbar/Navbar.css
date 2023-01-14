@@ -1,4 +1,5 @@
 .NavbarContainer {
+    top: 0;
     border: 2px solid red;
     height: 3.2rem;
     padding: 1rem;
