@@ -6,7 +6,7 @@ function DataDL() {
     return (   
         <>
             <div className='DataDL'>
-                Fish
+                Exploring the Ocean
             </div>
         </>
     );

@@ -1,5 +1,6 @@
 .FishList {
-    border: 2px solid red;
+    border: 2px solid blue;
+    margin: 0;
     padding: 30px;
     --n: 3; /* number of rows*/
     --m: 4; /* number of columns */
@@ -35,5 +36,6 @@
         0 0 50px #fff,            /* outer white */
         -10px 0 80px rgb(0, 13, 255),        /* outer left magenta */
         10px 0 80px #0ff;         /* outer right cyan */
+    transition: all 0.25s ease-in-out
 }
 

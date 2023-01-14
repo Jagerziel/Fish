@@ -12,7 +12,8 @@ import { createStore } from 'react-redux'
 import parse from 'html-react-parser';
 
 function App() {
-
+  const [ toggleRand, setToggleRand ] = useState(false)
+  console.log(toggleRand)
   return (
     <div className="App">
       <Navbar />
