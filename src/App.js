@@ -4,6 +4,7 @@ import './App.css';
 import Navbar from './Pages/HomeNavbar/Navbar.jsx';
 import Content from './Pages/HomeContent/Content.jsx'
 import FishContent from './Pages/FishContent/FishContent.jsx';
+import RandomFish from './Pages/RandomFish/RandomFish.jsx';
 //Import Routes
 import { Routes , Route } from "react-router-dom";
 import { useState , useEffect } from 'react';
@@ -21,6 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Content data={ data } setData={ setData }/>}/>
           <Route path="/fish" element={<FishContent />}/>
+          <Route path="/random-fish" element={<RandomFish />}/>
         </Routes> 
       </div>
     </div>

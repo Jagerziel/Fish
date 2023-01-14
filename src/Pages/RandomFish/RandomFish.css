@@ -1,0 +1,12 @@
+.RandomFishContainer {
+    border: 2px solid red;
+    font-size: 2rem;
+    width: 80%;
+    height:48vw;
+}
+
+.RandomFishHeader {
+    width: 100%;
+    background-color: black;
+    color: white;
+}

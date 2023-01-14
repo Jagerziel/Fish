@@ -17,6 +17,7 @@ function Navbar(props) {
                 <div className='NavRight'>
                     <Link to={`/`} className="Links">Home</Link>
                     <Link to={`/fish`} className="Links">More Fish!</Link>
+                    <Link to={`/random-fish`} className="Links">Random Fish!</Link>
                 </div>
             </div>
         </>
