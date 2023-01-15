@@ -15,7 +15,7 @@ This site allows you to navigate through three screens.  The first is a homescre
 
 ### ***Home Page Screenshot***
 
-![Home Page](./public/Images/RMImg1.jpg)
+![Home Page](./public/Images/RM_Img1.jpg)
 
 ### ***Random Fish Screenshot***
 
