@@ -6,7 +6,7 @@ import FishBoxModal from '../FishBoxModal/FishBoxModal.jsx'
 function FishBox() {
     const [ data , setData ] = useState([])
     //Lifted States for FishBoxModal
-    // const [modalOpen, setModalOpen] = useState(false);
+    const [modalOpen, setModalOpen] = useState(false);
     // const [modalData, setModalData] = useState(null);
 
 
@@ -25,14 +25,14 @@ function FishBox() {
                 <div className='FishList'>
                     {data.map((item, index) => {
                         return (
-                            <button key={index} className='FishListItem' >
+                            <button key={index} className='FishListItem' onClick={() => setModalOpen(true)} >
                                 {item["Species Name"]}
                             </button>
                         )
                     })}
                 </div>
             </div>
-            <FishBoxModal />
+            <FishBoxModal onClose={() => setModalOpen(false)} modalOpen={modalOpen}/>
         </>
     );
 }

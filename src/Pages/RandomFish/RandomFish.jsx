@@ -1,10 +1,12 @@
 import './RandomFish.css'
 
 import { useState , useEffect } from 'react';
+import { useLocation } from "react-router-dom";
 
 //Build Navbar Component
-function RandomFish({ toggleRand }) {
+function RandomFish() {
     //Assign Variables
+    const location = useLocation();
     const [ data , setData ] = useState([])
 
     let randomNum = Math.floor(Math.random() * data.length)
@@ -14,10 +16,8 @@ function RandomFish({ toggleRand }) {
         fetch(`https://projecttwoapi-production.up.railway.app/api/fish`)
         .then(res => res.json())
         .then(data => setData(data))
-      }, [toggleRand]); 
+      }, [location]); 
     // console.log(data)
-
-
     
     if (!data[randomNum]) return <h1>Loading…</h1>;
     

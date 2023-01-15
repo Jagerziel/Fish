@@ -12,11 +12,6 @@ import { createStore } from 'react-redux'
 import parse from 'html-react-parser';
 
 function App() {
-  const [ toggleRand, setToggleRand ] = useState(false)
-  const display = () => {
-    setToggleRand(prev => !prev)
-  } 
-  console.log(toggleRand)
   return (
     <div className="App" id="root">
       <Navbar />
@@ -24,7 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Content />}/>
           <Route path="/fish" element={<FishContent />}/>
-          <Route path="/random-fish" element={<RandomFish onClick={() => display()} toggleRand={toggleRand}/>}/>
+          <Route path="/random-fish" element={<RandomFish />}/>
         </Routes> 
       </div>
     </div>
