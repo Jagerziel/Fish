@@ -9,7 +9,6 @@ import RandomFish from './Pages/RandomFish/RandomFish.jsx';
 import { Routes , Route } from "react-router-dom";
 import { useState , useEffect } from 'react';
 import { createStore } from 'react-redux'
-import parse from 'html-react-parser';
 
 function App() {
   return (
