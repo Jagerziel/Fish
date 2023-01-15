@@ -9,13 +9,13 @@ function FishBoxModal(props) {
         <div className='FishBoxModalContainer'>
             <div className='FishBoxModalBox'>
                 <div className='ModalHeader'>
-                    <h2>TESTING</h2>
+                    <h4>TESTING</h4>
+                    <button className='CloseModal'>X</button>
                 </div>
                 <div className='ModalBody'>
                     <p>BODY CONTENT</p>
                 </div>
-                <div>
-                    <button className='CloseModal'>X</button>
+                <div className='ModalFooter'>
                 </div>
             </div>
         </div> 

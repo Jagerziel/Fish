@@ -1,6 +1,6 @@
 import './Fishbox.css'
 import { useEffect , useState } from 'react'
-// import FishBoxModal from '../FishBoxModal/FishBoxModal.jsx'
+import FishBoxModal from '../FishBoxModal/FishBoxModal.jsx'
 
 //Build Navbar Component
 function FishBox() {
@@ -32,7 +32,7 @@ function FishBox() {
                     })}
                 </div>
             </div>
-            {/* <FishBoxModal /> */}
+            <FishBoxModal />
         </>
     );
 }
