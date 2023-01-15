@@ -7,9 +7,8 @@ function FishBox() {
     const [ data , setData ] = useState([])
     //Lifted States for FishBoxModal
     const [modalOpen, setModalOpen] = useState(false);
-    // const [modalData, setModalData] = useState(null);
-
-
+    const [modalData, setModalData] = useState({});
+    const [indexNo, setIndexNo] = useState(null)
 
     useEffect(() => {
         fetch(`https://projecttwoapi-production.up.railway.app/api/fish`)
@@ -18,6 +17,10 @@ function FishBox() {
     }, []);      
     console.log(data)
     
+    function modalIndivInfo (item) {
+        setModalData(item)
+        setModalOpen(true)
+    }
 
     return (   
         <>
@@ -25,7 +28,8 @@ function FishBox() {
                 <div className='FishList'>
                     {data.map((item, index) => {
                         return (
-                            <button key={index} className='FishListItem' onClick={() => setModalOpen(true)} >
+                            <button key={index} className='FishListItem' 
+                            onClick={() =>  setModalOpen(true)} >
                                 {item["Species Name"]}
                             </button>
                         )
