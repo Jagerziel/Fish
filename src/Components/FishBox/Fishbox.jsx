@@ -8,18 +8,21 @@ function FishBox() {
     //Lifted States for FishBoxModal
     const [modalOpen, setModalOpen] = useState(false);
     const [modalData, setModalData] = useState({});
-    const [indexNo, setIndexNo] = useState(null)
 
     useEffect(() => {
         fetch(`https://projecttwoapi-production.up.railway.app/api/fish`)
         .then(res => res.json())
         .then(data => setData(data))
-    }, []);      
-    console.log(data)
+    }, []); 
+
+  console.log(data)
     
-    function modalIndivInfo (item) {
-        setModalData(item)
+    if (data.length === 0) return <h1>Loading…</h1>;
+  
+    const modelOp = (item) => {
         setModalOpen(true)
+        setModalData(item)
+        console.log(item)
     }
 
     return (   
@@ -28,17 +31,25 @@ function FishBox() {
                 <div className='FishList'>
                     {data.map((item, index) => {
                         return (
-                            <button key={index} className='FishListItem' 
-                            onClick={() =>  setModalOpen(true)} >
+                            <button key={index} className='FishListItem' onClick={() => modelOp(item)} >
                                 {item["Species Name"]}
                             </button>
                         )
                     })}
                 </div>
             </div>
-            <FishBoxModal onClose={() => setModalOpen(false)} modalOpen={modalOpen}/>
+        {modalOpen && <FishBoxModal onClose={() => setModalOpen(false)} modalData={modalData}/>}
         </>
     );
 }
 //Export Component
 export default FishBox
+
+
+
+
+
+
+
+
+
