@@ -15,15 +15,15 @@ This site allows you to navigate through three screens.  The first is a homescre
 
 ### ***Home Page Screenshot***
 
-![Home Page](/fish/public/Images/RM_Img1.jpg)
+![Home Page](./public/Images/RMImg1.jpg)
 
 ### ***Random Fish Screenshot***
 
-![Random Fish](/fish/public/Images/RM_Img2.jpg)
+![Random Fish](./public/Images/RM_Img2.jpg)
 
 ### ***More Fish! Screenshot***
 
-![More Fish!](/fish/public/Images/RM_Img3.jpg)
+![More Fish!](./public/Images/RM_Img3.jpg)
 
 ## Pages
 
@@ -59,14 +59,14 @@ The API provided several fields of data but the only fields used for this projec
 ### Pulling the data from the API
 
 Snippet of object output:
-![All Data](/fish/public/Images/RM_Img4.jpg)
+![All Data](./public/Images/RM_Img4.jpg)
 
 ### Cleaning Habitat Data
 The habitat data was cleaned using a number of filters to remove the html elements embedded in the text.  
 
 ## Routing
 Below is a basic overview of the App.js and the subsequent components:
-![All Data](/fish/public/Images/RM_Img5.jpg)
+![All Data](./public/Images/RM_Img5.jpg)
 
 ## Future Features
 - Refactored code for more efficient API calls and display
