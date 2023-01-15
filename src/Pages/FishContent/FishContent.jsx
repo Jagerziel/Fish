@@ -1,5 +1,5 @@
 import './FishContent.css'
-import FishBox from '../../Components/Fishbox.jsx';
+import FishBox from '../../Components/FishBox/Fishbox.jsx'
 
 import { useState } from 'react';
 
