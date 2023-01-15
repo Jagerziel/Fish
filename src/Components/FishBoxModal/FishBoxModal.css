@@ -18,14 +18,17 @@
     width: 70vw;
     height: 50vh;
     box-shadow: inset 0 0 2rem 1rem rgb(10, 0, 71);
-    background: url(../../../public/Images/Img3.jpg) rgba(75, 168, 255, 0.25) no-repeat center center fixed;
-    /* background-size: cover; */
+    background: url(../../../public/Images/Img3.jpg) rgba(109, 184, 255, 0.654) no-repeat center center fixed;
+    background-size: cover;
     background-blend-mode: multiply;
+    filter: brightness(1.6);
+    overflow-y: scroll;
+
 }
 
 .ModalHeader {
     /* border: 2px solid red; */
-    padding: 1.4rem 1.4rem 0px 1.4rem;
+    padding: 1.7rem 1.7rem 0px 1.7rem;
     margin: 0;
     display: flex;
     flex-direction: row;
@@ -38,7 +41,7 @@ h4 {
 
 .ModalBody {
     /* border: 2px solid red; */
-    padding: 0 1.4rem 1.4rem 1.4rem;
+    padding: 0 1.7rem 1.7rem 1.7rem;
 }
 
 .CloseModal {
