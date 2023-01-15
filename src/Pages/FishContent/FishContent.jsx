@@ -6,7 +6,6 @@ import { useState } from 'react';
 //Build Navbar Component
 function FishContent() {
     //Assign Variables
-
     return (   
         <>
             <div className='FishContentContainer'>
@@ -17,8 +16,6 @@ function FishContent() {
         </>
     );
 }
-
-
 
 //Export Component
 export default FishContent

@@ -1,18 +1,14 @@
 import './Fishbox.css'
 import { useEffect , useState } from 'react'
+// import FishBoxModal from '../FishBoxModal/FishBoxModal.jsx'
 
 //Build Navbar Component
 function FishBox() {
     const [ data , setData ] = useState([])
-    // //Assign Variables
-    function twelveRandomFish () {
-        let fishArr = []
-        for (let i = 0; i < 12; i++) {
-            fishArr.push(Math.floor(Math.random() * 12))
-        }
-        return fishArr
-    } 
-// console.log(fishArr())
+    //Lifted States for FishBoxModal
+    // const [modalOpen, setModalOpen] = useState(false);
+    // const [modalData, setModalData] = useState(null);
+
 
 
     useEffect(() => {
@@ -26,16 +22,17 @@ function FishBox() {
     return (   
         <>
             <div className='FishBox'>
-                <ul className='FishList'>
+                <div className='FishList'>
                     {data.map((item, index) => {
                         return (
-                            <li key={index} className='FishListItem'>
-                                <p>{item["Species Name"]}</p>
-                            </li>
+                            <button key={index} className='FishListItem' >
+                                {item["Species Name"]}
+                            </button>
                         )
                     })}
-                </ul>
+                </div>
             </div>
+            {/* <FishBoxModal /> */}
         </>
     );
 }

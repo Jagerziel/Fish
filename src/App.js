@@ -18,7 +18,7 @@ function App() {
   } 
   console.log(toggleRand)
   return (
-    <div className="App">
+    <div className="App" id="root">
       <Navbar />
       <div className='MainContent'>
         <Routes>
