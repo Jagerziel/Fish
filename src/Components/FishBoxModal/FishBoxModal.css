@@ -1,5 +1,5 @@
 .FishBoxModalContainer {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     font-size: 2rem;
     color: black;
     position: fixed;
@@ -14,14 +14,17 @@
 }
 
 .FishBoxModalBox {
+    border: .05rem solid rgb(0, 0, 0);
     width: 70vw;
     height: 50vh;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255, 1);
+    box-shadow: inset 0 0 2rem 1rem rgb(10, 0, 71);
     
 }
 
 .ModalHeader {
-    padding: 10px 10px 0px 10px;
+    /* border: 2px solid red; */
+    padding: 1.4rem 1.4rem 0px 1.4rem;
     margin: 0;
     display: flex;
     flex-direction: row;
@@ -33,10 +36,16 @@ h4 {
 }
 
 .ModalBody {
-    padding: 10px;
+    /* border: 2px solid red; */
+    padding: 0 1.4rem 1.4rem 1.4rem;
 }
 
 .CloseModal {
+    margin: 0;
     height: 20px;
     width: 20px;
+    background-color: black;
+    color: white;
+    display: flex;
+
 }
