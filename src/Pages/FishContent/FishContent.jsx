@@ -1,8 +1,6 @@
+//Imports
 import './FishContent.css'
 import FishBox from '../../Components/FishBox/Fishbox.jsx'
-
-import { useState } from 'react';
-
 //Build Navbar Component
 function FishContent() {
     //Assign Variables
@@ -16,6 +14,5 @@ function FishContent() {
         </>
     );
 }
-
 //Export Component
 export default FishContent

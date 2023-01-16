@@ -7,7 +7,8 @@ Our assignment was to use a fellow colleague's API and build out the front end. 
 - GitHub Link: https://github.com/Jagerziel/Fish
 - Railway Link: TBC
 - Home Directory: http://localhost:3000/
-- The API is sourced from https://github.com/HowzayCalderon/projectTwoAPI
+- Colleague's API is sourced from https://github.com/HowzayCalderon/projectTwoAPI
+- Original API source is https://www.fishwatch.gov/developers
 
 ## Navigation
 
@@ -66,6 +67,7 @@ The habitat data was cleaned using a number of filters to remove the html elemen
 
 ## Routing
 Below is a basic overview of the App.js and the subsequent components:
+
 ![All Data](./public/Images/RM_Img5.jpg)
 
 ## Future Features

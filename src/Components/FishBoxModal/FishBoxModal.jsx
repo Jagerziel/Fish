@@ -1,9 +1,10 @@
+//Imports
 import './FishBoxModal.css'
 import React from 'react';
 
 //Build Navbar Component
 function FishBoxModal({onClose, modalData}) {
-
+    //Clean Data
     let habitat = modalData['Habitat']
     if (habitat !== null) {
         habitat = habitat.replaceAll("<ul>", "")
@@ -24,6 +25,7 @@ function FishBoxModal({onClose, modalData}) {
     return (
         <div className='FishBoxModalContainer'>
             <div className='FishBoxModalBox'>
+                    {/* Modal Structure and Styling */}
                     <div className='ModalHeader'>
                         <h4>{modalData["Species Name"]}</h4>
                         <button className='CloseModal' onClick={onClose}>X</button>
