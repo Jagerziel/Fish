@@ -8,19 +8,18 @@ function RandomFish() {
     //Assign Variables
     const location = useLocation();
     const [ data , setData ] = useState([])
-
     let randomNum = Math.floor(Math.random() * data.length)
-
-    console.log(randomNum)
+    //Pull API Data
     useEffect(() => {
         fetch(`https://projecttwoapi-production.up.railway.app/api/fish`)
         .then(res => res.json())
         .then(data => setData(data))
-      }, [location]); 
+      }, [location]);
+    //Test Data Pull 
     // console.log(data)
-    
+    //Ensure Component Loads in Order
     if (!data[randomNum]) return <h1>Loading…</h1>;
-    
+    //Set Variables and Clean Data
     let speciesName = data[randomNum]["Species Name"]
     let habitat = data[randomNum]['Habitat']
     if (habitat !== null) {
@@ -38,8 +37,6 @@ function RandomFish() {
     } else {
         habitat = "Information Unavailable from API"
     }
-
-
     //Assign Variables
     return (   
         <>

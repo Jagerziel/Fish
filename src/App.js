@@ -7,7 +7,7 @@ import FishContent from './Pages/FishContent/FishContent.jsx';
 import RandomFish from './Pages/RandomFish/RandomFish.jsx';
 //Import Routes
 import { Routes , Route } from "react-router-dom";
-import { useState , useEffect } from 'react';
+//React Redux
 import { createStore } from 'react-redux'
 
 function App() {
@@ -24,5 +24,5 @@ function App() {
     </div>
   );
 }
-
+//Export App
 export default App;
