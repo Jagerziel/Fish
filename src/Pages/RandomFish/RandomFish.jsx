@@ -4,7 +4,8 @@ import { useState , useEffect } from 'react';
 import { useLocation } from "react-router-dom";
 
 //Build Navbar Component
-function RandomFish() {
+function RandomFish(props) {
+    // const { data } = props
     //Assign Variables
     const location = useLocation();
     const [ data , setData ] = useState([])
