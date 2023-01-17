@@ -6,11 +6,50 @@ import Content from './Pages/HomeContent/Content.jsx'
 import FishContent from './Pages/FishContent/FishContent.jsx';
 import RandomFish from './Pages/RandomFish/RandomFish.jsx';
 //Import Routes
-import { Routes , Route } from "react-router-dom";
+import { Routes , Route , useLocation } from "react-router-dom";
 //React Redux
 import { createStore } from 'react-redux'
+//React
+import { useState , useEffect } from 'react';
 
 function App() {
+  const [ data , setData ] = useState([])
+  //API Call for fish data  
+  useEffect(() => {
+    fetch(`https://projecttwoapi-production.up.railway.app/api/fish`)
+    .then(res => res.json())
+    .then(data => {
+      //Maps the data with the new object and cleaned data
+      let fishData = data.map((fish) => {
+        //Returns object with cleaned data
+        return {
+          "Species Name": fish["Species Name"],
+          Habitat: filterHtmlTags(fish.Habitat)
+        }
+      });
+      //Sets cleaned data
+      setData(fishData)
+    })
+  }, []);
+  //Test Data Pull 
+  // console.log(data)
+  //Filter out tags included in data
+  function filterHtmlTags (info) {
+    const [string] = [info];
+    //Texts to exclude
+    const exclude = ['<ul>','<ul/>','<li>','<li/>','<p>', '</p>','<em>','</em>',';','<a href=','</a','>'];
+    //Set initial variable state to null
+    let result = null;
+    if (string == null) {
+      return result
+    } else {
+      result = exclude.reduce((str, word) => 
+        //removes each item in exclude array as well as any extra spaces (and replaces with only one space)
+        str.replaceAll(word, ''), string).replaceAll(/\s+/g, ' ');
+      return result
+    }
+  }
+
   return (
     <div className="App" id="root">
       <Navbar />
