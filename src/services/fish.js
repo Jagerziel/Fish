@@ -9,3 +9,4 @@ export const getFish = async () => {
         throw error
     }
 }
+
