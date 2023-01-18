@@ -12,6 +12,12 @@ function RandomFish(props) {
     // console.log(data[randomNum]["Species Name"])
     let speciesName = data[randomNum]["Species Name"]
     let habitat = data[randomNum]['Habitat'] === null ? "Information Unavailable from API" : data[randomNum]['Habitat']
+    
+    // const [ randNum , setRandNum ] = useState(null)
+    // function randomize () {
+    //     setRandNum(Math.floor(Math.random() * data.length)) 
+    // }
+
 
     //Assign Variables
     // const location = useLocation();
@@ -56,7 +62,6 @@ function RandomFish(props) {
             </div>
         </>
     );
-
 }
 
 

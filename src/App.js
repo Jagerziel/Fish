@@ -14,6 +14,7 @@ import { useState , useEffect } from 'react';
 
 function App() {
   const [ data , setData ] = useState([])
+  const [toggle, setToggle] = useState(false)
   //API Call for fish data  
   useEffect(() => {
     fetch(`https://projecttwoapi-production.up.railway.app/api/fish`)
@@ -31,7 +32,7 @@ function App() {
       setData(fishData)
     })
   }, []);
-  //Test Data Pull 
+  /*Test Data Pull*/ 
   // console.log(data)
   //Filter out tags included in data
   function filterHtmlTags (info) {
@@ -53,7 +54,7 @@ function App() {
 
   return (
     <div className="App" id="root">
-      <Navbar />
+      <Navbar setToggle={setToggle}/>
       <div className='MainContent'>
         <Routes>
           <Route path="/" element={<Content />}/>
