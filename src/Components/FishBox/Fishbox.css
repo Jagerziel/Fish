@@ -11,6 +11,7 @@
     width: calc(var(--m) * var(--s) + (var(--m) - 1) * var(--g));
     height: calc(var(--n) * var(--s) + (var(--n) - 1) * var(--g));
     grid-template-columns: repeat(var(--m), auto);
+    
 }
 
 .FishListItem {
