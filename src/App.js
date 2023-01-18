@@ -37,7 +37,7 @@ function App() {
   function filterHtmlTags (info) {
     const [string] = [info];
     //Texts to exclude
-    const exclude = ['<ul>','<ul/>','<li>','<li/>','<p>', '</p>','<em>','</em>',';','<a href=','</a','>'];
+    const exclude = ['<ul>','</ul>','<li>','</li>','<p>', '</p>','<em>','</em>',';','<a href=','</a','>'];
     //Set initial variable state to null
     let result = null;
     if (string == null) {
@@ -49,6 +49,7 @@ function App() {
       return result
     }
   }
+  console.log(data)
 
   return (
     <div className="App" id="root">
@@ -57,7 +58,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Content />}/>
           <Route path="/fish" element={<FishContent />}/>
-          <Route path="/random-fish" element={<RandomFish />}/>
+          <Route path="/random-fish" element={<RandomFish data={ data }/>}/>
         </Routes> 
       </div>
     </div>

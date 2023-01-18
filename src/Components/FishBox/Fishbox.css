@@ -13,7 +13,6 @@
     grid-template-columns: repeat(var(--m), auto);
 }
 
-
 .FishListItem {
     /* border: 2px solid red; */
     display: flex;
