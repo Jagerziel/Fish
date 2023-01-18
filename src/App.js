@@ -8,7 +8,9 @@ import RandomFish from './Pages/RandomFish/RandomFish.jsx';
 //Import Routes
 import { Routes , Route , useLocation } from "react-router-dom";
 //React
-import { useState , useEffect , createContext , useContext } from 'react';
+import React , { useState , useEffect , createContext , useContext } from 'react';
+
+export const FishDataContext = React.createContext();
 
 function App() {
   //Set global useStates
@@ -54,13 +56,15 @@ function App() {
   return (
     <div className="App" id="root">
       <Navbar setToggle={setToggle}/>
-      <div className='MainContent'>
-          <Routes>
-              <Route path="/" element={<Content />}/>
-              <Route path="/fish" element={<FishContent data={ data }/>}/>
-              <Route path="/random-fish" element={ <RandomFish data={data} /> }/>
-          </Routes> 
-      </div>
+      <FishDataContext.Provider value={data} >
+        <div className='MainContent'>
+            <Routes>
+                <Route path="/" element={<Content />}/>
+                <Route path="/fish" element={<FishContent data={ data }/>}/>
+                <Route path="/random-fish" element={<RandomFish />}/>
+            </Routes> 
+        </div>
+      </FishDataContext.Provider>
     </div>
   );
 }

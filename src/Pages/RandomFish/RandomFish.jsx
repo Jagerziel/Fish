@@ -3,9 +3,11 @@ import './RandomFish.css'
 //Import React
 import { useLocation } from "react-router-dom";
 import { useContext } from 'react';
+import { FishDataContext } from '../../App';
 
 //Build Navbar Component
-function RandomFish( { data } ) {
+function RandomFish() {
+    const data = useContext(FishDataContext)
     let randomNum = Math.floor(Math.random() * data.length)
     if (!data[randomNum]) return <h1>Loading…</h1>;
     // console.log(data[randomNum]["Species Name"])
