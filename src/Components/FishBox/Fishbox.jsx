@@ -1,10 +1,16 @@
-//Imports
+//Import CSS
 import './Fishbox.css'
-import { useEffect , useState } from 'react'
+//Import React
+import { useEffect , useState , useContext } from 'react'
+//Import Components
 import FishBoxModal from '../FishBoxModal/FishBoxModal.jsx'
+//Import Context
+import { FishDataContext } from '../../App'
 
 //Build Navbar Component
-function FishBox({ data }) {
+function FishBox() {
+    //Access Context
+    const data = useContext(FishDataContext)
     //Lifted States for FishBoxModal
     const [modalOpen, setModalOpen] = useState(false);
     const [modalData, setModalData] = useState({});

@@ -1,8 +1,8 @@
 //Import CSS
 import './RandomFish.css'
 //Import React
-import { useLocation } from "react-router-dom";
 import { useContext } from 'react';
+//Import Context
 import { FishDataContext } from '../../App';
 
 //Build Navbar Component

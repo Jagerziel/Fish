@@ -7,9 +7,9 @@ import FishContent from './Pages/FishContent/FishContent.jsx';
 import RandomFish from './Pages/RandomFish/RandomFish.jsx';
 //Import Routes
 import { Routes , Route , useLocation } from "react-router-dom";
-//React
+//Import React
 import React , { useState , useEffect , createContext , useContext } from 'react';
-
+//Export Create Context to access Fish Data Globally
 export const FishDataContext = React.createContext();
 
 function App() {
@@ -56,6 +56,7 @@ function App() {
   return (
     <div className="App" id="root">
       <Navbar setToggle={setToggle}/>
+      {/* Set Context Provider for Fish Data */}
       <FishDataContext.Provider value={data} >
         <div className='MainContent'>
             <Routes>

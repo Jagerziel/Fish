@@ -1,6 +1,5 @@
-//Imports
+//Import CSS
 import './FishBoxModal.css'
-import React from 'react';
 
 //Build Navbar Component
 function FishBoxModal({ onClose, modalData }) {

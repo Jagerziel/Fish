@@ -1,5 +1,6 @@
-//Imports
+//Import CSS
 import './Navbar.css'
+//Import React Router Dom for Links
 import { Link } from 'react-router-dom';
 
 //Build Navbar Component
