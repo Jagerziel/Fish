@@ -37,7 +37,7 @@ function App() {
   function filterHtmlTags (info) {
     const [string] = [info];
     //Texts to exclude
-    const exclude = ['<ul>','</ul>','<li>','</li>','<p>', '</p>','<em>','</em>',';','<a href=','</a','>'];
+    const exclude = ['<ul>','</ul>','<li>','</li>','<p>', '</p>','<em>','</em>',';','<a href=','</a','&nbsp','>'];
     //Set initial variable state to null
     let result = null;
     if (string == null) {

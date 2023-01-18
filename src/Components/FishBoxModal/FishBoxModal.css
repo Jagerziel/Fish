@@ -21,8 +21,9 @@
     background: url(../../../public/Images/Img3.jpg) rgb(255, 255, 255) no-repeat center center fixed;
     background-size: cover;
     background-blend-mode: multiply;
-    filter: brightness(1.6);
+    filter: brightness(0.9);
     overflow-y: scroll;
+    color: white;
 }
 
 .ModalHeader {
