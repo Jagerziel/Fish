@@ -49,7 +49,7 @@ function App() {
       return result
     }
   }
-  console.log(data)
+  // console.log(data)
 
   return (
     <div className="App" id="root">
@@ -57,7 +57,7 @@ function App() {
       <div className='MainContent'>
         <Routes>
           <Route path="/" element={<Content />}/>
-          <Route path="/fish" element={<FishContent />}/>
+          <Route path="/fish" element={<FishContent data={ data }/>}/>
           <Route path="/random-fish" element={<RandomFish data={ data }/>}/>
         </Routes> 
       </div>

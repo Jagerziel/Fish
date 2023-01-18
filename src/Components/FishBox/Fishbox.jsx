@@ -4,7 +4,7 @@ import { useEffect , useState } from 'react'
 import FishBoxModal from '../FishBoxModal/FishBoxModal.jsx'
 
 //Build Navbar Component
-function FishBox() {
+function FishBox({ data }) {
     const [ data , setData ] = useState([])
     //Lifted States for FishBoxModal
     const [modalOpen, setModalOpen] = useState(false);

@@ -2,13 +2,13 @@
 import './FishContent.css'
 import FishBox from '../../Components/FishBox/Fishbox.jsx'
 //Build Navbar Component
-function FishContent() {
+function FishContent({data}) {
     //Assign Variables
     return (   
         <>
             <div className='FishContentContainer'>
                 <div className='Fishies'>
-                    <FishBox />
+                    <FishBox data={ data }/>
                 </div>
             </div>
         </>

@@ -3,7 +3,7 @@ import './FishBoxModal.css'
 import React from 'react';
 
 //Build Navbar Component
-function FishBoxModal({onClose, modalData}) {
+function FishBoxModal({ onClose, modalData }) {
     //Clean Data
     let habitat = modalData['Habitat']
     if (habitat !== null) {
