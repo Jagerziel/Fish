@@ -11,6 +11,7 @@ import { Routes , Route , useLocation } from "react-router-dom";
 import { createStore } from 'react-redux'
 //React
 import  React, { useState , useEffect , createContext , useContext } from 'react';
+import ReactDOM from 'react-dom';
 
 const FishDataContext = React.createContext();
 
@@ -54,21 +55,32 @@ function App() {
     }
   }
   let data2 = JSON.stringify(data)
+
+  function RandomFishFunc () {
+    return (
+      <FishDataContext.Provider value={ data2 }>
+        <RandomFish />
+      </FishDataContext.Provider>
+    )
+  }
   // console.log(data)
   return (
     <div className="App" id="root">
       <Navbar setToggle={setToggle}/>
       <div className='MainContent'>
-        <FishDataContext.Provider value={ data2 }>
+        {/* <FishDataContext.Provider value={ data2 }> */}
           <Routes>
               <Route path="/" element={<Content />}/>
               <Route path="/fish" element={<FishContent data={ {data} }/>}/>
-              <Route path="/random-fish" element={<RandomFish />}/>
+              <Route path="/random-fish" element={RandomFishFunc}/>
           </Routes> 
-        </FishDataContext.Provider>
+        {/* </FishDataContext.Provider> */}
       </div>
     </div>
   );
 }
 //Export App
 export default App;
+
+const root = document.querySelector('#root');
+ReactDOM.render(<App />, root);
