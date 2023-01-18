@@ -1,5 +1,6 @@
+//Import CSS
 import './RandomFish.css'
-
+//Import React
 import { useState , useEffect } from 'react';
 import { useLocation } from "react-router-dom";
 
@@ -8,7 +9,7 @@ function RandomFish(props) {
     const { data } = props
     let randomNum = Math.floor(Math.random() * data.length)
     if (!data[randomNum]) return <h1>Loading…</h1>;
-    console.log(data[randomNum]["Species Name"])
+    // console.log(data[randomNum]["Species Name"])
     let speciesName = data[randomNum]["Species Name"]
     let habitat = data[randomNum]['Habitat'] === null ? "Information Unavailable from API" : data[randomNum]['Habitat']
 

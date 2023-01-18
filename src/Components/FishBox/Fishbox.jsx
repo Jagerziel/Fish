@@ -5,26 +5,17 @@ import FishBoxModal from '../FishBoxModal/FishBoxModal.jsx'
 
 //Build Navbar Component
 function FishBox({ data }) {
-    const [ data , setData ] = useState([])
     //Lifted States for FishBoxModal
     const [modalOpen, setModalOpen] = useState(false);
     const [modalData, setModalData] = useState({});
-    //API Pull
-    useEffect(() => {
-        fetch(`https://projecttwoapi-production.up.railway.app/api/fish`)
-        .then(res => res.json())
-        .then(data => setData(data))
-    }, []); 
-    //Console-Log Test Output
-//   console.log(data)
-    //Ensure loading in correct order
-    if (data.length === 0) return <h1>Loading…</h1>;
-    //Set item on click for modal
+    //Set information to be used in modal
     const modelOp = (item) => {
         setModalOpen(true)
         setModalData(item)
-        console.log(item)
     }
+    //Ensure proper load
+    if (data.length === 0) return <h1>Loading…</h1>;
+
     return (   
         <>
             <div className='FishBox'>
