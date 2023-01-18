@@ -3,7 +3,7 @@ import './Navbar.css'
 import { Link } from 'react-router-dom';
 
 //Build Navbar Component
-function Navbar({setToggle}) {
+function Navbar({ setToggle }) {
     return (   
         <>
             <div className='NavbarContainer'>

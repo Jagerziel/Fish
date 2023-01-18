@@ -5,7 +5,7 @@
 Our assignment was to use a fellow colleague's API and build out the front end.  This project takes you through the best habitat details for some of our most exotic fish.  You can navigate through random fish or select any that you would like to learn more about.  The API was created by **Jose Calderon**, GitHub: https://github.com/HowzayCalderon
 
 - GitHub Link: https://github.com/Jagerziel/Fish
-- Railway Link: TBC
+- Deployed (Netlify) Link: https://exploring-the-ocean.netlify.app/
 - Home Directory: http://localhost:3000/
 - Colleague's API is sourced from https://github.com/HowzayCalderon/projectTwoAPI
 - Original API source is https://www.fishwatch.gov/developers
@@ -29,9 +29,9 @@ This site allows you to navigate through three screens.  The first is a homescre
 ## Pages
 
 To navigate to an individual page via the URL, use the following:
-1) Home:  http://localhost:3000/
-2) Random Fish: http://localhost:3000/random-fish
-3) More Fish!: http://localhost:3000/fish
+1) Home:  https://exploring-the-ocean.netlify.app/
+2) Random Fish: https://exploring-the-ocean.netlify.app/random-fish
+3) More Fish!: https://exploring-the-ocean.netlify.app/fish
 
 ## Technical Notes
 

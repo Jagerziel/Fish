@@ -2,7 +2,7 @@
 import './FishContent.css'
 import FishBox from '../../Components/FishBox/Fishbox.jsx'
 //Build Navbar Component
-function FishContent({data}) {
+function FishContent({ data }) {
     //Assign Variables
     return (   
         <>
