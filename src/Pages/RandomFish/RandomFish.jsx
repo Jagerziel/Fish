@@ -1,11 +1,13 @@
 //Import CSS
 import './RandomFish.css'
 //Import React
-import { useState , useEffect } from 'react';
 import { useLocation } from "react-router-dom";
+import { useContext } from 'react';
 
 //Build Navbar Component
-function RandomFish({ data }) {
+function RandomFish() {
+    const data2 = useContext(FishDataContext)
+    const data = JSON.parse(data2)
     let randomNum = Math.floor(Math.random() * data.length)
     if (!data[randomNum]) return <h1>Loading…</h1>;
     // console.log(data[randomNum]["Species Name"])
@@ -14,7 +16,6 @@ function RandomFish({ data }) {
     //Assign Variables
     return (   
         <>
-
             <div className='RandomFishContainer'>
                 {/* Content for Home Page */}
                 {speciesName && <h3 className='FishHeader'>{speciesName}</h3>}
@@ -23,8 +24,6 @@ function RandomFish({ data }) {
         </>
     );
 }
-
-
 
 //Export Component
 export default RandomFish

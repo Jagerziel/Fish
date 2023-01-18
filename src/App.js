@@ -10,9 +10,12 @@ import { Routes , Route , useLocation } from "react-router-dom";
 //React Redux
 import { createStore } from 'react-redux'
 //React
-import { useState , useEffect } from 'react';
+import  React, { useState , useEffect , createContext , useContext } from 'react';
+
+const FishDataContext = React.createContext();
 
 function App() {
+  //Set global useStates
   const [ data , setData ] = useState([])
   const [toggle, setToggle] = useState(false)
   //API Call for fish data  
@@ -50,17 +53,19 @@ function App() {
       return result
     }
   }
+  let data2 = JSON.stringify(data)
   // console.log(data)
-
   return (
     <div className="App" id="root">
       <Navbar setToggle={setToggle}/>
       <div className='MainContent'>
-        <Routes>
-          <Route path="/" element={<Content />}/>
-          <Route path="/fish" element={<FishContent data={ data }/>}/>
-          <Route path="/random-fish" element={<RandomFish data={ data }/>}/>
-        </Routes> 
+        <FishDataContext.Provider value={ data2 }>
+          <Routes>
+              <Route path="/" element={<Content />}/>
+              <Route path="/fish" element={<FishContent data={ {data} }/>}/>
+              <Route path="/random-fish" element={<RandomFish />}/>
+          </Routes> 
+        </FishDataContext.Provider>
       </div>
     </div>
   );
