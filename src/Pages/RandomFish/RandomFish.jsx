@@ -5,9 +5,7 @@ import { useLocation } from "react-router-dom";
 import { useContext } from 'react';
 
 //Build Navbar Component
-function RandomFish() {
-    const data2 = useContext(FishDataContext)
-    const data = JSON.parse(data2)
+function RandomFish( { data } ) {
     let randomNum = Math.floor(Math.random() * data.length)
     if (!data[randomNum]) return <h1>Loading…</h1>;
     // console.log(data[randomNum]["Species Name"])
