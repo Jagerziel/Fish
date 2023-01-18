@@ -71,6 +71,3 @@ function App() {
 }
 //Export App
 export default App;
-
-// const root = document.querySelector('#root');
-// ReactDOM.render(<App />, root);
