@@ -15,7 +15,7 @@ export const FishDataContext = React.createContext();
 function App() {
   //Set global useStates
   const [ data , setData ] = useState([])
-  const [toggle, setToggle] = useState(false)
+  const [ toggle, setToggle ] = useState(false)
   //API Call for fish data  
   useEffect(() => {
     fetch(`https://projecttwoapi-production.up.railway.app/api/fish`)

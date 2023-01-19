@@ -22,18 +22,31 @@
     background-size: cover;
     background-blend-mode: multiply;
     filter: brightness(0.9);
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     color: white;
     border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5px;
 }
 
 .ModalHeader {
     /* border: 2px solid red; */
-    padding: 1.7rem 1.7rem 0px 1.7rem;
-    margin: 0;
+    padding: 1.7rem 1rem 1.5px 1.7rem;
+    margin-bottom: 0.5rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 576px) {
+    .FishBoxModalBox {
+        /* border: 2px solid red; */
+        overflow-x: hidden;
+    }
+    .ModalHeader {
+        font-size: .75em;
+    }
 }
 
 h4 {
@@ -42,7 +55,10 @@ h4 {
 
 .ModalBody {
     /* border: 2px solid red; */
-    padding: 0 1.7rem 1.7rem 1.7rem;
+    padding: 0rem 1.7rem 0rem 1.7rem;
+    /* word-break:break-all; */
+    word-wrap: break-word;
+    overflow-y: scroll; 
 }
 
 .CloseModal {
@@ -59,3 +75,4 @@ h4 {
 #RF1 {
     font-weight: bold;
 }
+
