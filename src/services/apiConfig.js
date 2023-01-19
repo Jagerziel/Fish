@@ -4,7 +4,7 @@ let apiUrl;
 
 const apiUrls = {
     production: "https://projecttwoapi-production.up.railway.app/api/fish",
-    development: "https://projecttwoapi-production.up.railway.app/api/fish"
+    development: "http://localhost:3000/api"
 }
 
 if (window.location.hostname === "localhost") {
