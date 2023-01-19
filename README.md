@@ -71,8 +71,9 @@ Below is a basic overview of the App.js and the subsequent components:
 ![All Data](./public/Images/RM_Img5.jpg)
 
 ## Future Features
-- Refactored code for more efficient API calls and display
 - User Authentication
-- Additional details on each fish
-- Better handling of API results that have null data for habitat
+- Better conditional handling of results that have null data
+- Implement CRUD
+- Pull in Pictures from Separate API
+
 
