@@ -26,6 +26,12 @@ This site allows you to navigate through three screens.  The first is a homescre
 
 ![More Fish!](./public/Images/RM_Img3.jpg)
 
+### ***More Fish Modal Screenshot***
+
+![More Fish!](./public/Images/RM_Img6.jpg)
+
+
+
 ## Pages
 
 To navigate to an individual page via the URL, use the following:
