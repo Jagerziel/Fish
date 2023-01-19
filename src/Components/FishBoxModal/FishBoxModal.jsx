@@ -4,22 +4,9 @@ import './FishBoxModal.css'
 //Build Navbar Component
 function FishBoxModal({ onClose, modalData }) {
     //Clean Data
-    let habitat = modalData['Habitat']
-    if (habitat !== null) {
-        habitat = habitat.replaceAll("<ul>", "")
-        habitat = habitat.replaceAll("</ul>", "")
-        habitat = habitat.replaceAll("<li>", "")
-        habitat = habitat.replaceAll("</li>", "")
-        habitat = habitat.replaceAll("&nbsp", "")
-        habitat = habitat.replaceAll("<em>", "")
-        habitat = habitat.replaceAll("</em>", "")
-        habitat = habitat.replaceAll(";", "")
-        habitat = habitat.replaceAll("<a href=", "")
-        habitat = habitat.replaceAll("</a", "")
-        habitat = habitat.replaceAll(">", "")
-    } else {
-        habitat = "Information Unavailable from API"
-    }
+    let physDesc = modalData['Physical Description'] !== null ? modalData['Physical Description'] : "Information Unavailable from API"
+    let habitat = modalData['Habitat'] !== null ? modalData['Habitat'] : "Information Unavailable from API"
+    let popStatus = modalData['Population Status'] !== null ? modalData['Population Status'] : "Information Unavailable from API"
 
     return (
         <div className='FishBoxModalContainer'>
@@ -30,7 +17,9 @@ function FishBoxModal({ onClose, modalData }) {
                         <button className='CloseModal' onClick={onClose}>X</button>
                     </div>
                     <div className='ModalBody'>
-                        <p>{habitat}</p>
+                        <p><span id="RF1">Physical Description: </span>{physDesc}</p>
+                        <p><span id="RF1">Habitat: </span>{habitat}</p>
+                        <p><span id="RF1">Population Status: </span>{popStatus}</p>
                     </div>
                     <div className='ModalFooter'>
                     </div>

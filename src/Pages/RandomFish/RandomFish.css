@@ -7,7 +7,8 @@
     padding: 0px 20px 20px 20px;
     box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 rgba(0,0,0,0.5);
     overflow-y: scroll;
-    animation: changeBgRand 5s infinite 
+    animation: changeBgRand 5s infinite; 
+    border-radius: 1rem;
 }
 
 @keyframes changeBgRand {

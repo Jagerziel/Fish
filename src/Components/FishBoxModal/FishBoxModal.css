@@ -24,6 +24,7 @@
     filter: brightness(0.9);
     overflow-y: scroll;
     color: white;
+    border-radius: 1rem;
 }
 
 .ModalHeader {
@@ -53,4 +54,8 @@ h4 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#RF1 {
+    font-weight: bold;
 }

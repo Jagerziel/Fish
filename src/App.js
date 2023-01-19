@@ -27,7 +27,8 @@ function App() {
         return {
           "Species Name": fish["Species Name"],
           Habitat: filterHtmlTags(fish.Habitat),
-          "Population Status": filterHtmlTags(fish["Population Status"])
+          "Population Status": filterHtmlTags(fish["Population Status"]),
+          "Physical Description": filterHtmlTags(fish["Physical Description"])
         }
       });
       //Sets cleaned data
