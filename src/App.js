@@ -8,7 +8,7 @@ import RandomFish from './Pages/RandomFish/RandomFish.jsx';
 //Import Routes
 import { Routes , Route , useLocation } from "react-router-dom";
 //Import React
-import React , { useState , useEffect , createContext , useContext } from 'react';
+import React , { useState , useEffect , createContext } from 'react';
 //Export Create Context to access Fish Data Globally
 export const FishDataContext = React.createContext();
 
@@ -36,7 +36,7 @@ function App() {
     })
   }, []);
   /*Test Data Pull*/ 
-  console.log(data)
+  // console.log(data)
   //Filter out tags included in data
   function filterHtmlTags (info) {
     const [string] = [info];
