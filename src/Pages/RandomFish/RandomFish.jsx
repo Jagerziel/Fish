@@ -13,13 +13,16 @@ function RandomFish() {
     // console.log(data[randomNum]["Species Name"])
     let speciesName = data[randomNum]["Species Name"]
     let habitat = data[randomNum]['Habitat'] === null ? "Information Unavailable from API" : data[randomNum]['Habitat']
+    let popStatus = data[randomNum]['Population Status'] === null ? "Information Unavailable from API" : data[randomNum]['Habitat']
+
     //Assign Variables
     return (   
         <>
             <div className='RandomFishContainer'>
                 {/* Content for Home Page */}
                 {speciesName && <h3 className='FishHeader'>{speciesName}</h3>}
-                {habitat && <p className='FishContent'>{habitat}</p>}
+                {habitat && <p className='FishContent'><span id="RF1">Habitat: </span>{habitat}</p>}
+                {popStatus && <p className='FishContent'><span id="RF1">Population Status: </span>{popStatus}</p>}
             </div>
         </>
     );

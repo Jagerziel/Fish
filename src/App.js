@@ -26,7 +26,8 @@ function App() {
         //Returns object with cleaned data
         return {
           "Species Name": fish["Species Name"],
-          Habitat: filterHtmlTags(fish.Habitat)
+          Habitat: filterHtmlTags(fish.Habitat),
+          "Population Status": filterHtmlTags(fish["Population Status"])
         }
       });
       //Sets cleaned data
@@ -34,7 +35,7 @@ function App() {
     })
   }, []);
   /*Test Data Pull*/ 
-  // console.log(data)
+  console.log(data)
   //Filter out tags included in data
   function filterHtmlTags (info) {
     const [string] = [info];
