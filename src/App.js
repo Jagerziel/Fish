@@ -63,8 +63,8 @@ function App() {
         <div className='MainContent'>
             <Routes>
                 <Route path="/" element={<Content />}/>
-                <Route path="/fish" element={<FishContent data={ data }/>}/>
                 <Route path="/random-fish" element={<RandomFish />}/>
+                <Route path="/fish" element={<FishContent data={ data }/>}/>
             </Routes> 
         </div>
       </FishDataContext.Provider>

@@ -46,6 +46,7 @@ To navigate to an individual page via the URL, use the following:
 The API provided several fields of data but the only fields used for this project are:
 1) Fish Species
 2) Habitat
+3) Population Status
 
 *Note: Data is limited to 116 entries in the API provided*
 
